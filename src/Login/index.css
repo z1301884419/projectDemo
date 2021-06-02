@@ -1,0 +1,32 @@
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+.login{
+  width: 500px;
+  box-shadow: 1.5px 1.5px 5px rgb(224, 219, 219);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  padding: 15px;
+  padding-top: 30px;
+}
+.login .input{
+  border-radius: 2px;
+  margin: 15px auto;
+}
+.login .input input{
+  height: 30px;
+}
+.login .ant-input-affix-wrapper{
+  width: 80%;
+}

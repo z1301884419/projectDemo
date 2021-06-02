@@ -1,7 +1,7 @@
 
 import './App.css';
 import Home from './pages/Home'
-import Login from './pages/Login'
+import Login from './Login'
 
 function App() {
   return (
