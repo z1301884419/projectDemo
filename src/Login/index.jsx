@@ -1,17 +1,27 @@
 import React from 'react'
 import { Form, Input, Button, Checkbox,Select } from 'antd/lib/index';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import {inject,observer} from "mobx-react";
+import {toJS} from 'mobx'
 import * as request from '../utils/request'
+import {setStorage} from "../utils/storage";
 
 import './index.css'
 const { Option } = Select;
-function Login(){
+
+function Login(props){
   //表单提交的事件
   const onFinish = (values) => {
-    console.log(values);
     //请求登录
     request.LOGIN(values).then(res=>{
-      console.log(res);
+      //登录成功，保存信息
+      if(res.data.code===200){
+        setStorage('user',res.data)
+        let user = toJS(props.userStore.user)
+        props.userStore.setUser({...user,isLogin:true,permissicon:res.data.quanXian})
+        //跳转页面
+        props.history.push('/')
+      }
     })
   };
 
@@ -87,4 +97,4 @@ function Login(){
     </div>
   )
 }
-export default Login
+export default inject('userStore')(observer(Login))

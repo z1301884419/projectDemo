@@ -1,0 +1,17 @@
+.header{
+  background: #77c6ff!important;
+  position: relative;
+}
+.exit{
+  position: absolute;
+  right: 30px;
+}
+.ant-layout-header{
+  height: 80px!important;
+  line-height: 80px!important;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 80px!important;
+  letter-spacing: 4px;
+  color: #454744 !important;
+}

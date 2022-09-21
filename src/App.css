@@ -3,3 +3,27 @@
   height: 100vh;
   width: 100%;
 }
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+.btnText{
+  color:blue;
+  cursor: pointer;
+  display: inline-block;
+  padding: 2px 5px;
+}
+.hideHtml{
+  opacity:0!important;
+  height:0!important;
+  width:0!important;
+  margin:0!important;
+  padding:0!important;
+  font-size: 0!important;
+  line-height: 0!important;
+  cursor: default;
+  border:none!important;
+}
